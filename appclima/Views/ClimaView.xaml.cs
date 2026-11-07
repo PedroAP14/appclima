@@ -1,4 +1,5 @@
 using appclima.Models;
+using appclima.ViewModels;
 
 namespace appclima.Views;
 
@@ -8,7 +9,6 @@ public partial class ClimaView : ContentPage
 	{
 		InitializeComponent();
 
-		Clima clima = new Clima();
-		clima.Data = DateTime.Now;
-	}
+        BindingContext = new ClimaViewModel();
+    }
 }
